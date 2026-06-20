@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shraddhesh Kulkarni — QA Test Coordinator</title>
+<meta name="description" content="Shraddhesh Kulkarni — Quality Assurance Test Coordinator. 5+ years in automation, manual testing, and Azure cloud migration testing for banking systems.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0D1117;--ink2:#2D3748;--ink3:#6B7280;
+  --gold:#C9922A;--gold-bg:#FDF3E3;--gold-border:#E8C87A;
+  --teal:#0F7B6C;--teal-bg:#E6F7F4;
+  --surface:#FFFFFF;--page:#F7F6F2;
+  --border:rgba(13,17,23,0.1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'IBM Plex Sans',sans-serif;background:var(--page);color:var(--ink);line-height:1.6}
+a:focus-visible, button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (prefers-reduced-motion: reduce){*{transition:none !important;animation:none !important}}
+
+/* NAV */
+.top-bar{position:sticky;top:0;z-index:100;background:var(--ink);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(232,200,122,0.15)}
+.top-bar-name{font-family:'Playfair Display',serif;font-size:16px;color:#fff;letter-spacing:1px}
+.top-bar-links{display:flex;gap:28px}
+.top-bar-links a{font-size:12px;color:rgba(255,255,255,0.5);text-decoration:none;letter-spacing:0.5px;transition:color 0.2s}
+.top-bar-links a:hover{color:var(--gold-border)}
+@media(max-width:680px){.top-bar-links{display:none}}
+
+/* HERO */
+.hero{background:var(--ink);padding:88px 40px 72px}
+.hero-eyebrow{font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold-border);margin-bottom:16px}
+.hero-name{font-family:'Playfair Display',serif;font-size:clamp(44px,7vw,80px);font-weight:800;color:#fff;line-height:1;margin-bottom:14px}
+.hero-title{font-size:18px;color:rgba(255,255,255,0.5);font-weight:300;margin-bottom:8px}
+.hero-company{font-size:14px;color:var(--gold-border);margin-bottom:40px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.hero-company span{opacity:0.4;font-size:11px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:44px}
+.badge{font-size:11px;font-weight:500;padding:5px 14px;border-radius:2px;letter-spacing:0.5px}
+.badge-teal{background:rgba(15,123,108,0.2);color:#5DCAA5;border:1px solid rgba(93,202,165,0.2)}
+.badge-gold{background:rgba(201,146,42,0.15);color:var(--gold-border);border:1px solid rgba(201,146,42,0.2)}
+.hero-stats{display:flex;gap:48px;flex-wrap:wrap}
+.hstat-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--gold-border);line-height:1}
+.hstat-label{font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
+
+/* SECTIONS */
+.section{padding:80px 40px;background:var(--surface);border-top:0.5px solid var(--border)}
+.sec-bg{background:var(--page);background-image:radial-gradient(circle at 15% 50%,rgba(201,146,42,0.06) 0%,transparent 55%),radial-gradient(circle at 85% 20%,rgba(15,123,108,0.05) 0%,transparent 50%);border-top:0.5px solid var(--border);padding:80px 40px}
+.sec-bg2{background:#fff;background-image:radial-gradient(circle at 90% 80%,rgba(201,146,42,0.05) 0%,transparent 50%),radial-gradient(circle at 10% 30%,rgba(55,138,221,0.04) 0%,transparent 50%);border-top:0.5px solid var(--border);padding:80px 40px}
+.sec-label{font-size:10px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.sec-label::before{content:'';width:20px;height:1px;background:var(--gold)}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,36px);font-weight:700;color:var(--ink);margin-bottom:52px;line-height:1.15}
+.sec-title em{font-style:normal;color:var(--gold)}
+
+/* ABOUT */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.about-para{font-size:15px;color:var(--ink2);line-height:1.8;margin-bottom:18px}
+.about-quote{border-left:3px solid var(--gold);padding-left:20px;margin:28px 0;font-size:14px;font-style:italic;color:var(--ink);line-height:1.75}
+.info-row{display:flex;flex-direction:column;gap:12px}
+.info-item{background:var(--page);padding:14px 18px;border-radius:4px;border-left:3px solid var(--teal)}
+.info-item-label{font-size:10px;color:var(--ink3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px}
+.info-item-value{font-size:14px;font-weight:500;color:var(--ink)}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+.skill-card{background:var(--surface);border:0.5px solid var(--border);border-radius:4px;padding:24px 20px}
+.skill-top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.skill-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.skill-dot.java{background:#C9922A}.skill-dot.sql{background:#0F7B6C}.skill-dot.cloud{background:#378ADD}.skill-dot.auto{background:#8B5CF6}.skill-dot.test{background:#E24B4A}.skill-dot.lead{background:#D6336C}
+.skill-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--ink)}
+.skill-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
+.skill-tag{font-size:10px;padding:3px 8px;border-radius:2px;background:var(--page);color:var(--ink3);border:0.5px solid var(--border)}
+.skill-desc{font-size:12px;color:var(--ink3);line-height:1.55}
+.skill-bar{height:3px;background:var(--border);border-radius:2px;overflow:hidden;margin-top:12px}
+.skill-bar-fill{height:100%;border-radius:2px}
+
+/* EXPERIENCE */
+.exp-block{border:0.5px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:20px}
+.exp-block:last-child{margin-bottom:0}
+.exp-header{padding:26px 28px;background:var(--ink);display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.exp-role{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:5px}
+.exp-company{font-size:13px;color:var(--gold-border)}
+.exp-period{font-size:11px;font-weight:500;letter-spacing:1px;background:rgba(201,146,42,0.15);color:var(--gold-border);border:1px solid rgba(201,146,42,0.2);padding:5px 14px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+.exp-body{padding:26px 28px}
+.exp-desc{font-size:14px;color:var(--ink2);line-height:1.8;margin-bottom:18px}
+.exp-list{list-style:none;margin-bottom:18px}
+.exp-list li{font-size:14px;color:var(--ink2);line-height:1.8;padding-left:18px;position:relative;margin-bottom:6px}
+.exp-list li::before{content:'—';position:absolute;left:0;color:var(--gold)}
+.exp-tags{display:flex;flex-wrap:wrap;gap:7px}
+.exp-tag{font-size:11px;padding:4px 11px;border-radius:2px;background:var(--page);color:var(--ink2);border:0.5px solid var(--border)}
+.exp-tag.hi{background:var(--gold-bg);color:#7A5C00;border-color:var(--gold-border)}
+
+/* PROJECTS */
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.proj-card{border:0.5px solid var(--border);border-radius:4px;overflow:hidden;background:var(--surface)}
+.proj-num-bar{background:var(--teal-bg);border-bottom:0.5px solid rgba(15,123,108,0.15);padding:10px 20px;font-size:10px;font-weight:500;letter-spacing:2px;color:var(--teal);text-transform:uppercase}
+.proj-body{padding:22px}
+.proj-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;line-height:1.2}
+.proj-desc{font-size:13px;color:var(--ink3);line-height:1.65;margin-bottom:14px}
+.proj-modules{margin-bottom:14px}
+.proj-modules-label{font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.module-tags{display:flex;flex-wrap:wrap;gap:5px}
+.module-tag{font-size:10px;padding:4px 10px;border-radius:2px;background:var(--gold-bg);color:#7A5C00;border:0.5px solid var(--gold-border);font-weight:500}
+.proj-tags{display:flex;flex-wrap:wrap;gap:5px}
+.proj-tag{font-size:10px;padding:3px 8px;border-radius:2px;background:var(--page);color:var(--ink2);border:0.5px solid var(--border)}
+
+/* ACHIEVEMENTS */
+.ach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.ach-card{background:var(--surface);border:0.5px solid var(--border);border-left:3px solid var(--gold);border-radius:4px;padding:18px 20px}
+.ach-name{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:4px}
+.ach-meta{font-size:11px;color:var(--gold);letter-spacing:0.5px;margin-bottom:8px}
+.ach-desc{font-size:12.5px;color:var(--ink3);line-height:1.6}
+
+/* CERTS */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.cert-card{background:var(--page);border:0.5px solid var(--border);border-radius:4px;padding:18px 20px}
+.cert-name{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:4px}
+.cert-desc{font-size:12.5px;color:var(--ink3);line-height:1.6}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+.contact-intro{font-size:15px;color:var(--ink2);line-height:1.8;margin-bottom:28px}
+.contact-item{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.c-icon{width:42px;height:42px;border-radius:4px;background:var(--gold-bg);border:0.5px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.c-label{font-size:10px;color:var(--ink3);letter-spacing:1px;text-transform:uppercase;margin-bottom:3px}
+.c-value{font-size:14px;font-weight:500;color:var(--ink)}
+.c-value a{color:var(--teal);text-decoration:none}
+.c-value a:hover{text-decoration:underline}
+.linkedin-btn{display:inline-flex;align-items:center;gap:10px;margin-top:24px;padding:13px 26px;background:#0A66C2;color:#fff;font-family:'IBM Plex Sans',sans-serif;font-size:13px;font-weight:500;border-radius:4px;text-decoration:none;transition:background 0.2s}
+.linkedin-btn:hover{background:#084e96}
+.linkedin-icon{width:18px;height:18px;fill:#fff;flex-shrink:0}
+.summary-box{background:var(--ink);border-radius:4px;padding:30px}
+.sum-label{font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;margin-bottom:20px}
+.sum-item{display:flex;gap:12px;margin-bottom:16px;align-items:flex-start}
+.sum-item:last-child{margin-bottom:0}
+.sum-dot{width:5px;height:5px;border-radius:50%;background:var(--gold-border);flex-shrink:0;margin-top:7px}
+.sum-text{font-size:13px;color:rgba(255,255,255,0.55);line-height:1.65}
+
+/* FOOTER */
+.footer-bar{background:var(--ink);padding:22px 40px;display:flex;align-items:center;justify-content:space-between;border-top:0.5px solid rgba(201,146,42,0.15)}
+.footer-name{font-family:'Playfair Display',serif;font-size:15px;color:var(--gold-border)}
+.footer-copy{font-size:12px;color:rgba(255,255,255,0.3)}
+
+@media(max-width:768px){
+  .top-bar{padding:12px 20px}
+  .hero{padding:72px 20px 56px}
+  .hero-stats{gap:28px}
+  .section,.sec-bg,.sec-bg2{padding:60px 20px}
+  .two-col,.contact-grid{grid-template-columns:1fr;gap:36px}
+  .exp-header{flex-direction:column;gap:12px}
+  .footer-bar{padding:18px 20px;flex-direction:column;gap:8px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="top-bar">
+    <div class="top-bar-name">Shraddhesh Kulkarni</div>
+    <div class="top-bar-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#exp">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">QA Test Coordinator · Nashik, India</div>
+  <div class="hero-name">Shraddhesh<br>Kulkarni</div>
+  <div class="hero-title">Automation &amp; Manual Testing — Banking &amp; Cloud Migration</div>
+  <div class="hero-company">Capgemini Pvt. Ltd. <span>|</span> Consultant · Azure Cloud Migration</div>
+  <div class="hero-badges">
+    <span class="badge badge-teal">Banking BFSI</span>
+    <span class="badge badge-teal">Azure Migration</span>
+    <span class="badge badge-gold">Selenium</span>
+    <span class="badge badge-gold">Java</span>
+    <span class="badge badge-gold">Python</span>
+    <span class="badge badge-gold">Robot Framework</span>
+    <span class="badge badge-gold">SQL</span>
+  </div>
+  <div class="hero-stats">
+    <div><div class="hstat-num">5+</div><div class="hstat-label">Yrs Experience</div></div>
+    <div><div class="hstat-num">150+</div><div class="hstat-label">Apps Migrated</div></div>
+    <div><div class="hstat-num">9</div><div class="hstat-label">Projects Delivered</div></div>
+    <div><div class="hstat-num">7</div><div class="hstat-label">Awards Received</div></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section" id="about">
+  <div class="sec-label">About</div>
+  <div class="sec-title">Quality at the <em>core</em> of every release</div>
+  <div class="two-col">
+    <div>
+      <p class="about-para">I'm a Quality Assurance Test Coordinator with <strong>5+ years</strong> of experience across automation and manual testing — validating, implementing, and deploying large, complex, and mission-critical projects in banking and cloud migration.</p>
+      <p class="about-para">Currently, I'm a <strong>Consultant at Capgemini</strong>, working on an Azure cloud migration project. I test on-premise applications in lower environments, then validate the same applications post-migration in Azure to confirm zero functional regression — we've migrated and verified <strong>150+ applications</strong> to date.</p>
+      <blockquote class="about-quote">"Every application I validate is one less surprise in production — whether it's on-premise or in the cloud."</blockquote>
+      <p class="about-para">Previously, at Tata Consultancy Services, I worked across automation frameworks including Java Selenium, Robot Framework, TestNG, Python, and scriptless tools like Qualitia and UFT for CIBC, a major North American bank — leading a team of 5–6 associates across 9 cross-functional teams.</p>
+    </div>
+    <div class="info-row">
+      <div class="info-item"><div class="info-item-label">Full Name</div><div class="info-item-value">Shraddhesh Kulkarni</div></div>
+      <div class="info-item"><div class="info-item-label">Current Employer</div><div class="info-item-value">Capgemini Pvt. Ltd.</div></div>
+      <div class="info-item"><div class="info-item-label">Role</div><div class="info-item-value">Consultant</div></div>
+      <div class="info-item"><div class="info-item-label">Key Focus</div><div class="info-item-value">Azure Cloud Migration Testing</div></div>
+      <div class="info-item"><div class="info-item-label">Domain</div><div class="info-item-value">Banking &amp; Financial Technology</div></div>
+      <div class="info-item"><div class="info-item-label">Location</div><div class="info-item-value">Nashik, Maharashtra, India</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<div class="sec-bg" id="skills">
+  <div class="sec-label">Skills</div>
+  <div class="sec-title">Tools &amp; <em>expertise</em></div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-top"><div class="skill-dot auto"></div><div class="skill-name">Automation</div></div>
+      <div class="skill-tags"><span class="skill-tag">Selenium</span><span class="skill-tag">Robot FW</span><span class="skill-tag">TestNG</span><span class="skill-tag">Qualitia</span><span class="skill-tag">UFT</span></div>
+      <div class="skill-desc">Building and scaling automation frameworks for desktop, web, and mobile test execution.</div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width:92%;background:#8B5CF6"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-top"><div class="skill-dot java"></div><div class="skill-name">Java &amp; Python</div></div>
+      <div class="skill-tags"><span class="skill-tag">Core Java</span><span class="skill-tag">Python</span><span class="skill-tag">OOP</span></div>
+      <div class="skill-desc">Scripting and framework development for automated test suites.</div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width:85%;background:#C9922A"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-top"><div class="skill-dot sql"></div><div class="skill-name">SQL</div></div>
+      <div class="skill-tags"><span class="skill-tag">Queries</span><span class="skill-tag">DB Comparison</span><span class="skill-tag">Reporting</span></div>
+      <div class="skill-desc">Database validation and building custom comparison utilities for data integrity checks.</div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width:80%;background:#0F7B6C"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-top"><div class="skill-dot cloud"></div><div class="skill-name">Cloud (Azure)</div></div>
+      <div class="skill-tags"><span class="skill-tag">Migration Testing</span><span class="skill-tag">Env Validation</span></div>
+      <div class="skill-desc">Validating on-premise to Azure migrations across functional, integration, and config layers.</div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width:88%;background:#378ADD"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-top"><div class="skill-dot test"></div><div class="skill-name">Testing Practices</div></div>
+      <div class="skill-tags"><span class="skill-tag">Functional</span><span class="skill-tag">Regression</span><span class="skill-tag">API</span><span class="skill-tag">Mobile</span><span class="skill-tag">Cross-Browser</span></div>
+      <div class="skill-desc">Full-spectrum manual and automated testing across web, mobile, and API surfaces.</div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width:90%;background:#E24B4A"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-top"><div class="skill-dot lead"></div><div class="skill-name">Leadership</div></div>
+      <div class="skill-tags"><span class="skill-tag">Team Lead</span><span class="skill-tag">Defect Mgmt</span><span class="skill-tag">JIRA</span><span class="skill-tag">HP ALM</span></div>
+      <div class="skill-desc">Leading test teams, managing defect lifecycles, and stakeholder reporting.</div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width:86%;background:#D6336C"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="sec-bg2" id="exp">
+  <div class="sec-label">Experience</div>
+  <div class="sec-title">Professional <em>journey</em></div>
+
+  <div class="exp-block">
+    <div class="exp-header">
+      <div>
+        <div class="exp-role">Consultant</div>
+        <div class="exp-company">Capgemini Pvt. Ltd. · Azure Cloud Migration</div>
+      </div>
+      <div class="exp-period">Current — Present</div>
+    </div>
+    <div class="exp-body">
+      <p class="exp-desc">Testing on-premise applications in lower environments prior to Azure migration, then validating the same applications post-migration in Azure to confirm zero functional regression from the on-premise baseline.</p>
+      <ul class="exp-list">
+        <li>Validated and migrated <strong>150+ applications</strong> to Azure to date.</li>
+        <li>Performed environment-to-environment comparison testing across functional, integration, and configuration layers.</li>
+        <li>Confirmed parity between on-premise and Azure environments before sign-off.</li>
+      </ul>
+      <div class="exp-tags">
+        <span class="exp-tag hi">Azure</span>
+        <span class="exp-tag hi">Migration Testing</span>
+        <span class="exp-tag">Regression Testing</span>
+        <span class="exp-tag">Environment Validation</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-block">
+    <div class="exp-header">
+      <div>
+        <div class="exp-role">System Engineer</div>
+        <div class="exp-company">Tata Consultancy Services · Client: CIBC, USA (Banking / BFSI)</div>
+      </div>
+      <div class="exp-period">Aug 2019 — Recent</div>
+    </div>
+    <div class="exp-body">
+      <p class="exp-desc">Owned complete automation testing lifecycle — requirement gathering through QA sign-off — for one of CIBC's core retail banking platforms.</p>
+      <ul class="exp-list">
+        <li>Led a team of 5–6 associates, coordinating with 9 other teams to keep delivery in sync.</li>
+        <li>Managed defect &amp; test tracking via HP ALM, JIRA, and Test Manager.</li>
+        <li>Built and scaled automation frameworks for cross-browser and mobile (iOS / Android / iPad) testing.</li>
+        <li>Tracked overall testing progress and reported status to stakeholders.</li>
+      </ul>
+      <div class="exp-tags">
+        <span class="exp-tag hi">Retail Banking</span>
+        <span class="exp-tag hi">Subject Matter Expert</span>
+        <span class="exp-tag">Robot Framework</span>
+        <span class="exp-tag">Java TestNG</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="sec-bg" id="projects">
+  <div class="sec-label">Projects</div>
+  <div class="sec-title">Work that <em>matters</em></div>
+  <div class="proj-grid">
+    <div class="proj-card">
+      <div class="proj-num-bar">Project 01 · Azure Migration</div>
+      <div class="proj-body">
+        <div class="proj-name">Azure Cloud Migration — Validation Suite</div>
+        <div class="proj-desc">End-to-end migration testing for applications moving from on-premise to Azure. Each application is baseline-tested on-premise, then re-validated post-migration in Azure to confirm identical behavior.</div>
+        <div class="proj-modules">
+          <div class="proj-modules-label">Process</div>
+          <div class="module-tags">
+            <span class="module-tag">Baseline Test</span>
+            <span class="module-tag">Post-Migration Test</span>
+            <span class="module-tag">Comparison</span>
+            <span class="module-tag">Sign-off</span>
+          </div>
+        </div>
+        <div class="proj-tags"><span class="proj-tag">Azure</span><span class="proj-tag">Migration Testing</span><span class="proj-tag">Regression</span></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-num-bar">Project 02 · CIBC</div>
+      <div class="proj-body">
+        <div class="proj-name">CIBC Web Automation</div>
+        <div class="proj-desc">Desktop browser automation suite for CIBC's web banking platform — covering core retail banking flows end-to-end.</div>
+        <div class="proj-tags" style="margin-top:14px"><span class="proj-tag">Selenium</span><span class="proj-tag">Java</span></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-num-bar">Project 03 · CIBC</div>
+      <div class="proj-body">
+        <div class="proj-name">CIBC Mobile Web Automation</div>
+        <div class="proj-desc">Mobile browser automation for CIBC's responsive banking interface, validated across device viewports.</div>
+        <div class="proj-tags" style="margin-top:14px"><span class="proj-tag">Mobile Testing</span><span class="proj-tag">Cross-Browser</span></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-num-bar">Project 04 · CIBC</div>
+      <div class="proj-body">
+        <div class="proj-name">CIBC Mobile App Automation</div>
+        <div class="proj-desc">Native test automation for the CIBC mobile application across iOS, Android, and iPad platforms.</div>
+        <div class="proj-tags" style="margin-top:14px"><span class="proj-tag">iOS</span><span class="proj-tag">Android</span><span class="proj-tag">iPad</span></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-num-bar">Project 05 · CAMS</div>
+      <div class="proj-body">
+        <div class="proj-name">CAMS Automation</div>
+        <div class="proj-desc">Designed and built a custom user interface for the client as part of the CAMS automation initiative.</div>
+        <div class="proj-tags" style="margin-top:14px"><span class="proj-tag">UI Design</span><span class="proj-tag">Automation</span></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-num-bar">Project 06 · Horizon</div>
+      <div class="proj-body">
+        <div class="proj-name">Horizon Application Automation</div>
+        <div class="proj-desc">Automated a desktop application end-to-end using the Qualitia scriptless automation tool.</div>
+        <div class="proj-tags" style="margin-top:14px"><span class="proj-tag">Qualitia</span><span class="proj-tag">Desktop App</span></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-num-bar">Project 07 · CIBC CLASS</div>
+      <div class="proj-body">
+        <div class="proj-name">CIBC CLASS Modeling</div>
+        <div class="proj-desc">Built ConfirmIQ functional and automation models for the CIBC CLASS application.</div>
+        <div class="proj-tags" style="margin-top:14px"><span class="proj-tag">ConfirmIQ</span><span class="proj-tag">Modeling</span></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-num-bar">Project 08 · Utility</div>
+      <div class="proj-body">
+        <div class="proj-name">Database Comparison Utility</div>
+        <div class="proj-desc">Created a custom utility to compare database states and generate readable Excel comparison reports.</div>
+        <div class="proj-tags" style="margin-top:14px"><span class="proj-tag">SQL</span><span class="proj-tag">Excel Reporting</span></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-num-bar">Project 09 · CIBC Mortgage</div>
+      <div class="proj-body">
+        <div class="proj-name">CIBC Mortgage Web Application</div>
+        <div class="proj-desc">Automated the CIBC mortgage web application's core workflows using Robot Framework.</div>
+        <div class="proj-tags" style="margin-top:14px"><span class="proj-tag">Robot Framework</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ACHIEVEMENTS -->
+<div class="sec-bg2" id="achievements">
+  <div class="sec-label">Achievements</div>
+  <div class="sec-title">Recognized <em>impact</em></div>
+  <div class="ach-grid">
+    <div class="ach-card">
+      <div class="ach-name">Applause Award</div>
+      <div class="ach-meta">July 2024</div>
+      <div class="ach-desc">Successful delivery of automation package with zero issues.</div>
+    </div>
+    <div class="ach-card">
+      <div class="ach-name">On The Spot Award</div>
+      <div class="ach-meta">April 2024</div>
+      <div class="ach-desc">Project delivered without any production issues.</div>
+    </div>
+    <div class="ach-card">
+      <div class="ach-name">Best Practice Sharing — Team Award</div>
+      <div class="ach-meta">October 2023</div>
+      <div class="ach-desc">Recognized for quality, schedule adherence, and cost savings.</div>
+    </div>
+    <div class="ach-card">
+      <div class="ach-name">Continuous Feedback Star</div>
+      <div class="ach-meta">December 2022</div>
+      <div class="ach-desc">Consistent process-improvement feedback to the team.</div>
+    </div>
+    <div class="ach-card">
+      <div class="ach-name">Service &amp; Commitment Award</div>
+      <div class="ach-meta">August 2022</div>
+      <div class="ach-desc">Recognition for dedicated service.</div>
+    </div>
+    <div class="ach-card">
+      <div class="ach-name">Star of the Month</div>
+      <div class="ach-meta">December 2021</div>
+      <div class="ach-desc">Outstanding contribution to the organization.</div>
+    </div>
+    <div class="ach-card">
+      <div class="ach-name">Client Appreciation</div>
+      <div class="ach-meta">CIBC</div>
+      <div class="ach-desc">Recognized directly by the client for automation delivery and support.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CERTIFICATIONS -->
+<div class="section" id="certs">
+  <div class="sec-label">Certifications &amp; Education</div>
+  <div class="sec-title">Credentials &amp; <em>grounding</em></div>
+  <div class="cert-grid">
+    <div class="cert-card">
+      <div class="cert-name">MFDM™ AI Aware Certification</div>
+      <div class="cert-desc">Digital — completed training program for MFDM awareness.</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-name">MKCL Core Java Certification</div>
+      <div class="cert-desc">Jan 2019 — Core &amp; Advanced Java fundamentals.</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-name">ConfirmIQ Green Belt</div>
+      <div class="cert-desc">ConfirmIQ modeling — functional &amp; automation test case creation.</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-name">ConfirmIQ Brown Belt</div>
+      <div class="cert-desc">Advanced ConfirmIQ modeling and scripting.</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-name">MCA — Savitribai Phule Pune University</div>
+      <div class="cert-desc">Dr. Moonje Institute of Management &amp; Computer Studies, Nashik · 2022</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-name">BCA — Savitribai Phule Pune University</div>
+      <div class="cert-desc">K.K. Wagh Computer Science College, Nashik · 2019</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="sec-bg2" id="contact">
+  <div class="sec-label">Contact</div>
+  <div class="sec-title">Let's <em>connect</em></div>
+  <div class="contact-grid">
+    <div>
+      <p class="contact-intro">Open to QA / automation testing and cloud migration roles in banking, fintech, and beyond. Feel free to reach out directly.</p>
+      <div class="contact-item">
+        <div class="c-icon">📍</div>
+        <div><div class="c-label">Location</div><div class="c-value">Nashik, Maharashtra, India</div></div>
+      </div>
+      <div class="contact-item">
+        <div class="c-icon">📞</div>
+        <div><div class="c-label">Phone</div><div class="c-value"><a href="tel:+919623130900">+91 96231 30900</a></div></div>
+      </div>
+      <div class="contact-item">
+        <div class="c-icon">✉</div>
+        <div><div class="c-label">Email</div><div class="c-value"><a href="mailto:shraddheshkulkarni1999@gmail.com">shraddheshkulkarni1999@gmail.com</a></div></div>
+      </div>
+      <div class="contact-item">
+        <div class="c-icon">🏢</div>
+        <div><div class="c-label">Employer</div><div class="c-value">Capgemini Pvt. Ltd.</div></div>
+      </div>
+      <a href="https://www.linkedin.com/in/shraddhesh-kulkarni-58130517a" target="_blank" rel="noopener" class="linkedin-btn">
+        <svg class="linkedin-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+        Connect on LinkedIn
+      </a>
+    </div>
+    <div class="summary-box">
+      <div class="sum-label">Quick summary</div>
+      <div class="sum-item"><div class="sum-dot"></div><div class="sum-text">Consultant at Capgemini, testing applications through Azure cloud migration</div></div>
+      <div class="sum-item"><div class="sum-dot"></div><div class="sum-text">150+ applications migrated and validated from on-premise to Azure</div></div>
+      <div class="sum-item"><div class="sum-dot"></div><div class="sum-text">5+ years in automation &amp; manual testing for banking systems (CIBC)</div></div>
+      <div class="sum-item"><div class="sum-dot"></div><div class="sum-text">Skilled in Selenium, Robot Framework, TestNG, Python, SQL, ConfirmIQ</div></div>
+      <div class="sum-item"><div class="sum-dot"></div><div class="sum-text">Led teams of 5–6 across 9 cross-functional groups for on-time delivery</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-bar">
+  <div class="footer-name">Shraddhesh Kulkarni</div>
+  <div class="footer-copy">QA Test Coordinator · Capgemini Pvt. Ltd. · 2026</div>
+</div>
+
+</body>
+</html>
